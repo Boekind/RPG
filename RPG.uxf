@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>910</x>
-      <y>310</y>
+      <x>230</x>
+      <y>20</y>
       <w>210</w>
       <h>70</h>
     </coordinates>
@@ -17,109 +17,321 @@
     <id>UMLClass</id>
     <coordinates>
       <x>210</x>
-      <y>440</y>
+      <y>140</y>
       <w>210</w>
-      <h>70</h>
+      <h>160</h>
     </coordinates>
-    <panel_attributes>Hero
---</panel_attributes>
+    <panel_attributes>/Character/
+--
+- name: string
+- class: string (enum?)
+- level: int
+- imgUrl: string
+- hp: int
+- attackDamage: int
+- abilities: Dictionary&lt;string,int&gt;</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>630</x>
-      <y>190</y>
+      <x>510</x>
+      <y>700</y>
       <w>210</w>
       <h>70</h>
     </coordinates>
     <panel_attributes>Weapon
---</panel_attributes>
+--
+- attackDamage: int
+- class: string</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>170</x>
-      <y>210</y>
+      <x>80</x>
+      <y>360</y>
       <w>210</w>
       <h>70</h>
     </coordinates>
     <panel_attributes>Enemy
---</panel_attributes>
+--
+- loot: Dictionary&lt;string,int&gt;
+- </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>440</x>
-      <y>60</y>
-      <w>210</w>
+      <x>370</x>
+      <y>570</y>
+      <w>190</w>
       <h>70</h>
     </coordinates>
     <panel_attributes>Item
 --
+- name: string
+- value: int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>710</x>
+      <y>100</y>
+      <w>210</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Game
+--
+- ls: LoadingService
+- 
+-
++ startGame(): void
++ saveGame(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>710</x>
+      <y>290</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>LoadingService
+--
+- itemData: Item[]
+- enemyData: Enemy[]
+- heroData: Hero
+- storyData: StoryText[]
+--
++ loadLists(): void
++ loadItems(): void
++ loadEnemies(): void
++ loadHero(): void
++ loadStory(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>90</x>
+      <y>510</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Inventory
+--
+- items: Dictionary&lt;Item,int&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>350</x>
+      <y>360</y>
+      <w>210</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Hero
+--
+- weapon: Weapon
+- mp: int
+- xp: int
+- xpNextLevel: int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>700</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Consumable
+--
+- effect: string
+- amount: int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1040</x>
+      <y>260</y>
+      <w>280</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Fight
+--
+- hero: Hero
+- enemy: Enemy
+--
+- getRandomEnemy(level: int?): Enemy
+- getEnemy(name: string, level: int): Enemy
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>UMLClass</id>
+    <id>Relation</id>
     <coordinates>
-      <x>610</x>
-      <y>440</y>
-      <w>210</w>
-      <h>70</h>
+      <x>300</x>
+      <y>290</y>
+      <w>180</w>
+      <h>90</h>
     </coordinates>
-    <panel_attributes>Game
---</panel_attributes>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;160.0;40.0;160.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>170</x>
+      <y>290</y>
+      <w>160</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>140.0;10.0;140.0;40.0;10.0;40.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>630</y>
+      <w>180</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;160.0;40.0;160.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>630</y>
+      <w>160</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>140.0;10.0;140.0;40.0;10.0;40.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>710</x>
+      <y>480</y>
+      <w>210</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>:void oder :Data?
+bg=blue</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>670</x>
-      <y>650</y>
+      <x>960</x>
+      <y>540</y>
       <w>210</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>ListService
---</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>290</x>
-      <y>680</y>
-      <w>210</w>
-      <h>70</h>
+      <h>90</h>
     </coordinates>
     <panel_attributes>StoryText
---</panel_attributes>
+--
+- text: string
+- prevText: int
+- follText: int</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>UMLClass</id>
+    <id>Relation</id>
     <coordinates>
-      <x>920</x>
-      <y>30</y>
-      <w>210</w>
-      <h>70</h>
+      <x>550</x>
+      <y>380</y>
+      <w>180</w>
+      <h>40</h>
     </coordinates>
-    <panel_attributes>
---</panel_attributes>
-    <additional_attributes/>
+    <panel_attributes>lt=-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
   </element>
   <element>
-    <id>UMLClass</id>
+    <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>20</y>
-      <w>210</w>
-      <h>70</h>
+      <x>290</x>
+      <y>530</y>
+      <w>170</w>
+      <h>60</h>
     </coordinates>
-    <panel_attributes>
---</panel_attributes>
-    <additional_attributes/>
+    <panel_attributes>lt=-
+m1=1
+m2=*</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;10.0;150.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>910</x>
+      <y>450</y>
+      <w>170</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1= 1
+m2= *</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;10.0;140.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>430</y>
+      <w>220</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=1</panel_attributes>
+    <additional_attributes>10.0;140.0;10.0;110.0;130.0;110.0;130.0;10.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>800</x>
+      <y>200</y>
+      <w>40</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>30</x>
+      <y>40</y>
+      <w>190</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>170</x>
+      <y>450</y>
+      <w>320</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;40.0;290.0;40.0;290.0;10.0</additional_attributes>
   </element>
 </diagram>
