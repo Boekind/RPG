@@ -8,6 +8,11 @@ namespace RPG
     {
         public LoadingService LoadServ { get; set; }
 
+        public Game()
+        {
+            LoadServ = new LoadingService();
+        }
+
         public void StartGame()
         {
 
