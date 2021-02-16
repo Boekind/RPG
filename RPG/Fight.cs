@@ -9,14 +9,19 @@ namespace RPG
         public Hero ActiveHero { get; set; }
         public int ActiveEnemy { get; set; }
 
-        public Enemy GetRandomEnemy(int level)
+        public Fight()
         {
 
         }
 
-        public Enemy GetEnemy(string name, level int)
+        public Enemy GetRandomEnemy(int level)
         {
+            return new Enemy();
+        }
 
+        public Enemy GetEnemy(string name, int level)
+        {
+            return new Enemy();
         }
     }
 }

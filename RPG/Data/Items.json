@@ -1,0 +1,29 @@
+{
+  "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Collections.Generic.List`1[[RPG.Item, RPG]], System.Private.CoreLib]], System.Private.CoreLib",
+  "Weapons": {
+    "$type": "System.Collections.Generic.List`1[[RPG.Item, RPG]], System.Private.CoreLib",
+    "$values": [
+      {
+        "$type": "RPG.Weapon, RPG",
+        "AttackDamage": 69,
+        "Class": "Beispielklasse",
+	"InShop": true,
+        "Name": "Beispielwaffe",
+        "Value": 1234
+      }
+    ]
+  },
+  "Consumables": {
+    "$type": "System.Collections.Generic.List`1[[RPG.Item, RPG]], System.Private.CoreLib",
+    "$values": [
+      {
+        "$type": "RPG.Consumable, RPG",
+        "Effect": "Heal",
+        "Amount": 10,
+	"InShop": false,
+        "Name": "Beispieltrank",
+        "Value": 345
+      }
+    ]
+  }
+}

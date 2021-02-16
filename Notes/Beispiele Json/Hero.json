@@ -1,0 +1,29 @@
+{
+  "ActiveWeapon": {
+    "AttackDamage": 10,
+    "AllowedClass": "Klasse",
+    "Name": "Waffe",
+    "Value": 12
+  },
+  "Mp": 123,
+  "Xp": 123,
+  "XpNextLevel": 1235,
+  "ActiveInventory": {
+    "Items": {
+      "RPG.Consumable": 12
+    },
+    "Money": 1900
+  },
+  "Name": "Name",
+  "ActiveClass": "Klasse",
+  "Level": 1,
+  "ImgUrl": "Bild",
+  "MaxHp": 100,
+  "Hp": 30,
+  "BaseAttackDamage": 300,
+  "Abilities": [
+    {
+      "Name": "Fähigkeit"
+    }
+  ]
+}

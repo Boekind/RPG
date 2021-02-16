@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +15,7 @@ namespace RPG
         [STAThread]
         static void Main()
         {
+            var test = new LoadingService();
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

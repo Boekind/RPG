@@ -1,0 +1,19 @@
+{
+  "$type": "System.Collections.Generic.List`1[[RPG.Item, RPG]], System.Private.CoreLib",
+  "$values": [
+    {
+      "$type": "RPG.Consumable, RPG",
+      "Effect": "Heal",
+      "Amount": 20,
+      "Name": "Trank",
+      "Value": 30
+    },
+    {
+      "$type": "RPG.Weapon, RPG",
+      "AttackDamage": 1200,
+      "AllowedClass": "Klasse",
+      "Name": "Schwert",
+      "Value": 200
+    }
+  ]
+}

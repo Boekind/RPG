@@ -8,5 +8,6 @@ namespace RPG
     {
         public string Name { get; set; }
         public int Value { get; set; }
+        public bool InShop { get; set; }
     }
 }

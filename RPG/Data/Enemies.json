@@ -1,0 +1,35 @@
+[
+  {
+    "Loot": [
+      {
+        "ItemDrop": {
+          "AttackDamage": 100,
+          "AllowedClass": "alle",
+          "Name": "Beispielwaffe",
+          "Value": 100
+        },
+        "MinAmount": 0,
+        "MaxAmount": 1
+      },
+      {
+        "ItemDrop": {
+          "Effect": "Heal",
+          "Amount": 20,
+          "Name": "Beispieltrank",
+          "Value": 200
+        },
+        "MinAmount": 2,
+        "MaxAmount": 4
+      }
+    ],
+    "MoneyLoot": 100,
+    "Name": "Testfeind",
+    "ActiveClass": "Testklasse",
+    "Level": 88,
+    "ImgUrl": "Testbild",
+    "MaxHp": 100,
+    "Hp": 20,
+    "BaseAttackDamage": 200,
+    "Abilities": []
+  }
+]
